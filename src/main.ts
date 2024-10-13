@@ -57,9 +57,9 @@ function drawNoise3D() {
   const yOffset = Math.random();
   const zOffset = Math.random();
   const scale = 0.05678;
-  for (let z = 0; z < field.depth; z++) {
-    for (let y = 0; y < field.height; y++) {
-      for (let x = 0; x < field.width; x++) {
+  for (let z = 1; z < field.depth - 1; z++) {
+    for (let y = 1; y < field.height - 1; y++) {
+      for (let x = 1; x < field.width - 1; x++) {
         const value = noise3(
           xOffset + x * scale,
           yOffset + y * scale,
@@ -333,9 +333,9 @@ function drawNoise4D() {
   gl.uniform1i(fieldLoc, 1);
 
   requestAnimationFrame(function frame(time: number) {
-    for (let z = 0; z < field.depth; z++) {
-      for (let y = 0; y < field.height; y++) {
-        for (let x = 0; x < field.width; x++) {
+    for (let z = 1; z < field.depth - 1; z++) {
+      for (let y = 1; y < field.height - 1; y++) {
+        for (let x = 1; x < field.width - 1; x++) {
           const value = noise4(
             xOffset + x * scale,
             yOffset + y * scale,
