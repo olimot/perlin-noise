@@ -10,9 +10,6 @@ out vec3 vPosition;
 out vec3 vNormal;
 
 float getScalar(ivec3 p) {
-  if(p.x <= 0 || p.y <= 0 || p.z <= 0 || p.x >= fieldSize.x || p.y >= fieldSize.y || p.z >= fieldSize.z) {
-    return 0.0f;
-  }
   return float(texelFetch(field, ivec3(p.x, p.y, p.z), 0).x);
 }
 
@@ -26,8 +23,8 @@ vec4 getValue(ivec3 p) {
 }
 
 void main() {
-  int width = fieldSize[0];
-  int height = fieldSize[1];
+  int width = fieldSize[0] - 1;
+  int height = fieldSize[1] - 1;
 
   int z = gl_VertexID / (width * height * 15);
   int y = (gl_VertexID / (width * 15)) % height;

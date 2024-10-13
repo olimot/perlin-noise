@@ -199,11 +199,8 @@ function drawNoise3D() {
     gl.uniformMatrix4fv(viewProjectionLoc, false, viewProjection);
     gl.enable(gl.CULL_FACE);
     gl.enable(gl.DEPTH_TEST);
-    gl.drawArrays(
-      gl.TRIANGLES,
-      0,
-      field.width * field.height * field.depth * 15,
-    );
+    const cnt = (field.width - 1) * (field.height - 1) * (field.depth - 1) * 15;
+    gl.drawArrays(gl.TRIANGLES, 0, cnt);
     if (isActive) requestAnimationFrame(frame);
   }
   frame();
@@ -375,11 +372,8 @@ function drawNoise4D() {
     gl.uniformMatrix4fv(viewProjectionLoc, false, viewProjection);
     gl.enable(gl.CULL_FACE);
     gl.enable(gl.DEPTH_TEST);
-    gl.drawArrays(
-      gl.TRIANGLES,
-      0,
-      field.width * field.height * field.depth * 15,
-    );
+    const cnt = (field.width - 1) * (field.height - 1) * (field.depth - 1) * 15;
+    gl.drawArrays(gl.TRIANGLES, 0, cnt);
     requestAnimationFrame(frame);
   });
 }
