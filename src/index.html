@@ -5,18 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://olimot.github.io/main.css" />
     <title>Perlin noise</title>
     <script src="main.ts" type="module" async defer></script>
   </head>
   <body>
-    <h1>Noise 1D</h1>
-    <canvas id="noise1d" width="1080" height="720"></canvas>
-    <h1>Noise 2D</h1>
-    <canvas id="noise2d" width="1080" height="720"></canvas>
-    <h1>Noise 3D</h1>
-    <canvas id="noise3d" width="1080" height="720"></canvas>
-    <h1>Noise 4D</h1>
-    <canvas id="noise4d" width="1080" height="720"></canvas>
+    <div class="wrapper">
+      <h1>Perlin Noise</h1>
+      <p>
+        Perlin noise is a gradient-based procedural noise function developed by
+        Ken Perlin, widely used in computer graphics for generating
+        natural-looking textures, terrains, and other organic patterns. It
+        produces smooth, continuous variations by interpolating gradients at
+        lattice points, resulting in a coherent and visually appealing
+        randomness. Unlike pure randomness, Perlin noise is deterministic and
+        repeatable, making it ideal for applications like terrain generation,
+        cloud rendering, and animations where consistent patterns are essential.
+        Its flexibility and scalability allow it to be adapted to different
+        dimensions and customized for various use cases, from simple 2D textures
+        to complex 3D volumetric effects.
+      </p>
+      <h2>Noise 1D</h2>
+      <canvas id="noise1d" width="854" height="427"></canvas>
+      <h2>Noise 2D</h2>
+      <canvas id="noise2d" width="854" height="427"></canvas>
+      <h2>Noise 3D</h2>
+      <canvas id="noise3d" width="854" height="427"></canvas>
+      <h2>Noise 4D</h2>
+      <canvas id="noise4d" width="854" height="427"></canvas>
+    </div>
   </body>
 </html>
