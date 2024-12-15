@@ -22,7 +22,7 @@ export function initGL2(canvas: HTMLCanvasElement) {
   );
   gl.blendEquation(gl.FUNC_ADD);
   gl.colorMask(true, true, true, true);
-  gl.clearColor(1, 1, 1, 1);
+  gl.clearColor(0, 0, 0, 1);
   gl.clearDepth(1);
   return gl;
 }

@@ -8,6 +8,7 @@ function drawNoise1D() {
   const offset = Math.random();
   const scale = 0.05678;
   let p = noise1(offset);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   ctx.moveTo(0, canvas.height * p);
   ctx.beginPath();
   for (let i = 1; i < canvas.width; i++) {
@@ -16,7 +17,7 @@ function drawNoise1D() {
     p = nextP;
   }
   ctx.lineWidth = 1;
-  ctx.strokeStyle = "black";
+  ctx.strokeStyle = "white";
   ctx.stroke();
 }
 
